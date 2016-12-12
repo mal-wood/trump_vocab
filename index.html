@@ -1,0 +1,75 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Trump Vocab Tutor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  </head>
+  <body class="container">
+    <h1 class="bold-italic"> Trump Vocabulary Tutor </h1>
+    <div class="section">
+      Want to sound truly <span class="bold-italic">PRESIDENTIAL</span>? Practice sounding like @TheRealDonaldTrump by randomly inserting any of these words and phrases, as many times as possible, into your sentences. 
+    </div><br>
+    <div class="keys row">
+      <div data-key="32" class="button col s1"> 
+        <kbd>A</kbd><br>
+        <span class="sound">"Excuse me"</span>
+      </div>
+       <div data-key="83" class="button col s1"> 
+        <kbd>S</kbd><br>
+        <span class="sound">"It's illegal!"</span>
+      </div>
+       <div data-key="68" class="button col s1"> 
+        <kbd>D</kbd><br>
+        <span class="sound">"A MILLION DOLLARS"</span>
+      </div>
+       <div data-key="70" class="button col s1"> 
+        <kbd>F</kbd><br>
+        <span class="sound">"LOSERS"</span>
+      </div>
+      <div class="col s4">
+      </div>
+      <div data-key="74" class="button col s1"> 
+        <kbd>J</kbd><br>
+        <span class="sound">"tremendous"</span>
+      </div>
+      <div data-key="75" class="button col s1"> 
+        <kbd>K</kbd><br>
+        <span class="sound">"very very"</span>
+      </div>
+      <div data-key="76" class="button col s1"> 
+        <kbd>L</kbd><br>
+        <span class="sound">"I'm really rich"</span>
+      </div>
+      <div data-key="186" class="button col s1"> 
+        <kbd>;</kbd><br>
+        <span class="sound">"Winning"</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="button"> 
+        <kbd>spacebar</kbd>
+        <span class="sound">*bonus*</span>
+      </div>
+    </div>
+  </body>
+</html>
+
+<audio data-key="32" src="sounds/bonus_sentence2.mp3"></audio>
+<audio data-key="65" src="sounds/excuse_me.mp3"></audio>
+<audio data-key="83" src="sounds/its_illegal4.mp3"></audio>
+<audio data-key="68" src="sounds/a_million2.mp3"></audio>
+<audio data-key="70" src="sounds/losers.mp3"></audio>
+<audio data-key="74" src="sounds/tremendous.mp3"></audio>
+<audio data-key="76" src="sounds/really_rich3.mp3"></audio>
+
+<script>
+  window.addEventListener('keydown', function(event){
+    const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
+    if(!audio) return; //stops the function if the key entered is not one listed on the screen
+    audio.currentTime= 0;
+    audio.play();
+  });
+</script>
